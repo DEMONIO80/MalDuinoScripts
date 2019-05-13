@@ -4,3 +4,4 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/DEMONIO80/MalDuinoScripts.git
 git push -u origin master
+REM remember to add any and all payloads or scripts ok
